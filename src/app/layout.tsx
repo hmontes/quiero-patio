@@ -19,11 +19,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const isDev = process.env.NODE_ENV === "development";
+
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={isDev}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
