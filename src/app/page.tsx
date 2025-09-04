@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { SearchForm } from "@/components/search-form";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://quieropatio.com"),
+  title:
+    "Casas y terrenos en renta y venta a lo largo de todo México - QuieroPatio",
+  description:
+    "Encuentra casas, terrenos y otros inmuebles en renta y venta. Espacios pensados para disfrutar la vida en QuieroPatio",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (

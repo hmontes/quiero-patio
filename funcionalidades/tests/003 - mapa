@@ -1,0 +1,7 @@
+- [ ] 5.0 Pruebas y refinamiento
+  - [ ] 5.1 Probar la funcionalidad completa de selección de dirección con diferentes tipos de entradas (direcciones completas, parciales, inexistentes)
+  - [ ] 5.2 Verificar que la ubicación seleccionada se almacene correctamente en la base de datos con sus referencias a estado, municipio y colonia
+  - [ ] 5.3 Probar el comportamiento cuando el usuario mueve el pin en diferentes ubicaciones
+  - [ ] 5.4 Verificar que la interfaz sea responsive y funcione correctamente en dispositivos móviles
+  - [ ] 5.5 Ajustar la UI/UX para una experiencia de usuario fluida y responsiva
+  - [ ] 5.6 Probar casos límite como direcciones ambiguas o ubicaciones fuera de México

@@ -142,3 +142,17 @@ Hemos comenzado el análisis y planificación para implementar la funcionalidad 
 - Reemplazar el componente actual de selección de ubicación con el nuevo sistema de mapa
 - Asegurar que los datos de ubicación (estado, municipio, colonia) se obtengan correctamente a partir de la dirección o coordenadas
 - Mantener compatibilidad con la estructura de base de datos existente
+
+## Qwen Added Memories
+- Hemos implementado la funcionalidad de ingreso de dirección al publicar una propiedad usando un mapa interactivo con React-Leaflet. La implementación incluye:
+
+1. Componente MapSelector que permite ingresar direcciones o seleccionar ubicaciones en el mapa
+2. Endpoints de API para geocodificación (dirección → coordenadas) y geocodificación inversa (coordenadas → dirección)
+3. Actualizaciones en el formulario de propiedades para integrar el nuevo selector de mapas
+4. Agregamos columnas de coordenadas (latitude, longitude) a la tabla de propiedades en Supabase
+5. Creamos un componente PropertyLocation para mostrar la ubicación en la ficha de propiedades, que inicialmente muestra una imagen estática y al hacer clic carga el mapa interactivo
+6. Solucionamos problemas de hidratación SSR con Leaflet usando dynamic imports
+7. Movimos el mapa debajo de "Características principales" en la ficha de propiedades
+8. Corregimos la visualización del pin en el mapa interactivo
+
+La implementación optimiza el uso de recursos cargando el mapa interactivo solo cuando el usuario lo solicita, manteniendo inicialmente una imagen estática que consume menos recursos.
